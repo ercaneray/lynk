@@ -1,21 +1,14 @@
-import type { Metadata } from "next";
-import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Lynk",
-  description: "Chat app made in Next.js",
-};
-
+import './globals.css'
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
-  );
+      <html lang="en">
+        <body>
+          {children}
+        </body>
+      </html>
+  )
 }
