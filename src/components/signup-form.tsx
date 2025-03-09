@@ -22,7 +22,8 @@ export function SignupForm({ className, ...props }: React.ComponentProps<"div">)
         }
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password)
-            console.log(userCredential.user)
+            const user = userCredential.user
+            console.log(user)
         } catch (error) {
             alert((error as Error).message)
         }

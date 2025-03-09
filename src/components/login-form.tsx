@@ -17,7 +17,8 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
   const onSubmit = async ({ email, password }: Inputs) => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password)
-      console.log(userCredential.user)
+      const user = userCredential.user
+      console.log(user)
     } catch (error) {
       alert((error as Error).message)
     }
